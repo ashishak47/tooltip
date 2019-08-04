@@ -1,3 +1,68 @@
+## Example
+
+```js
+import React from 'react';
+import './App.css';
+import Tooltip from './Tooltip';
+
+class App extends React.Component {
+  render() {
+    const tooltipTarget = <span> Click/hover here</span>
+    return (
+      <div className="container">To test the tooltip 
+        <Tooltip content='this is a tooltip component example' 
+            placement='bottom'
+            target={tooltipTarget}
+            trigger='hover'
+        />
+      </div>
+    )
+  }
+}
+```
+
+
+## API
+
+### Props
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width: 100px;">name</th>
+        <th style="width: 50px;">type</th>
+        <th style="width: 50px;">default</th>
+        <th>description</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>trigger</td>
+          <td>string</td>
+          <td>'hover'</td>
+          <td>which actions cause tooltip shown. enum of 'hover','click'</td>
+        </tr>
+        <tr>
+          <td>position</td>
+          <td>string</td>
+          <td>'bottom'</td>
+          <td>one of ['left','right','top','bottom']</td>
+        </tr>
+        <tr>
+          <td>target</td>
+          <td>React.Element</td>
+          <td></td>
+          <td>Element on which the tooltip to be shown</td>
+        </tr>
+        <tr>
+          <td>content</td>
+          <td>string</td>
+          <td></td>
+          <td>Content to be shown as a tool component</td>
+        </tr>
+    </tbody>
+</table>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

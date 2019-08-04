@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Tooltip from './Tooltip';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    const tooltipTarget = <span> Click/hover here</span>
+    return (
+      <div className="container">To test the tooltip 
+        <Tooltip content='this is a tooltip component example' 
+            placement='bottom'
+            target={tooltipTarget}
+            trigger='hover'
+        />
+      </div>
+    )
+  }
 }
 
 export default App;
